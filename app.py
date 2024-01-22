@@ -82,7 +82,7 @@ senate_holdings = {
 }
 senate_holdings_df = pd.DataFrame(senate_holdings)
 
-plt.figure(figsize=(4, 4))
+plt.figure(figsize=(10, 10))
 plt.pie(senate_holdings_df['Value'], labels=senate_holdings_df['Company'], autopct='%1.1f%%', startangle=140)
 plt.title('Pie Chart of Company Values')
 st.pyplot()
