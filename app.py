@@ -88,8 +88,9 @@ with col2:
     # Placeholder for the CO2 emissions chart
 # Creating the DataFrame from the provided data
 # Plotting the pie chart
+st.set_option('deprecation.showPyplotGlobalUse', False)
 def plot_pie_chart():
-    plt.figure(figsize=(8, 8))
+    plt.figure(figsize=(4, 4))
     plt.pie(senate_holdings_df['Value'], labels=senate_holdings_df['Company'], autopct='%1.1f%%', startangle=140)
     plt.title('Pie Chart of Company Values')
     st.pyplot()
