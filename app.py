@@ -68,6 +68,8 @@ df = df.drop(['ReportDate', 'Amount', 'EstimatedShares', 'EstimatedSharesAdjuste
 df['PriceChange'] = df['PriceChange'] * 100
 # Round the PriceChange column to 1 decimal place
 df['PriceChange'] = df['PriceChange'].round(1)
+#Drop The INDEX
+df = df.reset_index(drop=True)
 
 ###st.table(df)###
 portfolio_value_chart_placeholder = st.dataframe(df)
