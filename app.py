@@ -52,6 +52,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown('<p class="title">Overall Senators\' Portfolio Evolution</p>', unsafe_allow_html=True)
     # Placeholder for the portfolio value chart
+    #ADDED TABLE
     import pandas as pd
 # Define the URL of the CSV file on GitHub
 url = "https://raw.githubusercontent.com/Laci1004/FIEP/main/DF_Recent_Trades.csv"
@@ -61,7 +62,7 @@ df = pd.read_csv(url)
 # Keep only the last 500 rows
 df = df.head(500)
 # Drop the report date, amount, estimated shares, and estimated shares adjusted columns
-df = df.drop(['ReportDate', 'Amount', 'EstimatedShares', 'EstimatedSharesAdjusted'], axis=1)
+df = df.drop(['ReportDate', 'Amount', 'EstimatedShares', 'EstimatedSharesAdjusted', "House"], axis=1)
 
 # Convert the PriceChange column to percentage
 df['PriceChange'] = df['PriceChange'] * 100
@@ -71,6 +72,7 @@ df['PriceChange'] = df['PriceChange'].round(1)
 ###st.table(df)###
 portfolio_value_chart_placeholder = st.dataframe(df)
 
+#END OF TABLE
 # Vertical line
 st.markdown('<div class="vl"></div>', unsafe_allow_html=True)
 
