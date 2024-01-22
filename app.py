@@ -82,7 +82,24 @@ st.markdown('<div class="vl"></div>', unsafe_allow_html=True)
 with col2:
     st.markdown('<p class="title">Overall CO2 Emissions in the US</p>', unsafe_allow_html=True)
     # Placeholder for the CO2 emissions chart
-    co2_emissions_chart_placeholder = st.empty()
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Creating the DataFrame from the provided data
+senate_holdings = {
+    'Company': ['MSFT', 'CVX', 'NVDA', 'TCMD', 'AORT', 'Other'],
+    'Value': [5318687.519617519, 145399.90950150584, 1172816.671357914, 
+              138301.38223705292, 131102.6007962471, 643041.4195683461]
+}
+
+senate_holdings_df = pd.DataFrame(senate_holdings)
+
+# Plotting the pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(senate_holdings_df['Value'], labels=senate_holdings_df['Company'], autopct='%1.1f%%', startangle=140)
+plt.title('Pie Chart of Company Values')
+plt.show()
+    #co2_emissions_chart_placeholder = st.empty()
 
 # Horizontal line
 st.markdown('<div class="horizontal-line"></div>', unsafe_allow_html=True)
