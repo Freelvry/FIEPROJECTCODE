@@ -8,7 +8,6 @@ Original file is located at
 """
 
 #python code
-
 # Import streamlit for the web app
 import streamlit as st
 
@@ -27,38 +26,6 @@ from scipy import stats
 
 # For handling dates and times
 from datetime import datetime
-
-# If you need to use an AI model for generating text (like GPT-2 or GPT-3)
-# you might use the transformers library by Hugging Face
-# from transformers import pipeline
-
-# If you want to use OpenAI's GPT-3, you'll need to install the openai library and use your API key
-# import openai
-
-# Set the page layout to wide
-st.set_page_config(layout="wide")
-
-# Title of the dashboard
-st.title('US Senator Portfolio Analysis Dashboard')
-
-# You can create a placeholder for the charts and tables, which can be populated later
-# Placeholder for top-left chart (overall evolution of portfolio value)
-portfolio_value_chart_placeholder = st.empty()
-
-# Placeholder for top-right chart (overall CO2 emissions in the US)
-co2_emissions_chart_placeholder = st.empty()
-
-# Placeholder for bottom-left table (ranking of top polluting companies)
-polluting_companies_table_placeholder = st.empty()
-
-# Placeholder for bottom-right section (AI-generated information on a particular stock)
-ai_generated_info_placeholder = st.empty()
-
-# To run this Streamlit app, save the code in a file named something like 'dashboard.py'
-# and run it using the command `streamlit run dashboard.py` in your terminal.
-
-# Import Streamlit
-import streamlit as st
 
 # Set the page layout to wide
 st.set_page_config(layout="wide")
