@@ -69,7 +69,7 @@ df['PriceChange'] = df['PriceChange'] * 100
 df['PriceChange'] = df['PriceChange'].round(1)
 
 ###st.table(df)###
-    portfolio_value_chart_placeholder = st.table(df)
+portfolio_value_chart_placeholder = st.table(df)
 
 # Vertical line
 st.markdown('<div class="vl"></div>', unsafe_allow_html=True)
