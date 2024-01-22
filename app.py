@@ -79,6 +79,10 @@ portfolio_value_chart_placeholder = st.dataframe(df)
 st.markdown('<div class="vl"></div>', unsafe_allow_html=True)
 
 # Second column for the CO2 emissions evolution
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
 with col2:
     st.markdown('<p class="title">Overall CO2 Emissions in the US</p>', unsafe_allow_html=True)
     # Placeholder for the CO2 emissions chart
